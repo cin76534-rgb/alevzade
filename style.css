@@ -1,0 +1,295 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #0d0d11;
+    color: #f1f1f1;
+}
+
+/* --- 1. GİRİŞ SAYFASI (INDEX) STİLLERİ --- */
+.welcome-screen {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: radial-gradient(circle, #240b0b 0%, #0d0d11 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-content {
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.restaurant-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffb703;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 183, 3, 0.3);
+}
+
+.welcome-content h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #ffffff;
+}
+
+.divider {
+    height: 2px;
+    width: 60px;
+    background-color: #ffb703;
+    margin: 15px auto;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: #cccccc;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.btn-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #e63946 0%, #b71c1c 100%);
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    transition: 0.3s ease;
+}
+
+.btn-main:active {
+    transform: scale(0.97);
+}
+
+/* --- 2. MENÜ SAYFASI STİLLERİ --- */
+.menu-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #16161a;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.back-btn {
+    color: #ffb703;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.menu-header h2 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+/* Kategori Navigasyonu */
+.category-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a24;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 12px 10px;
+    gap: 10px;
+    z-index: 9;
+    scrollbar-width: none; /* Firefox için gizle */
+}
+
+.category-nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari için gizle */
+}
+
+.cat-item {
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #252530;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.cat-item.active {
+    background-color: #ffb703;
+    color: #000000;
+}
+
+/* Menü Listesi Düzeni */
+.menu-container {
+    margin-top: 140px;
+    padding: 15px;
+    padding-bottom: 60px;
+}
+
+.menu-section {
+    margin-bottom: 30px;
+    scroll-margin-top: 140px; /* Link tıklandığında tam hizada dursun */
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: #ffb703;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #252530;
+    padding-bottom: 5px;
+}
+
+/* Ürün Kartı tasarımı */
+.menu-item {
+    display: flex;
+    background-color: #16161a;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.item-details {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.item-details h4 {
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.item-desc {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin: 4px 0;
+    line-height: 1.2;
+}
+
+.item-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffb703;
+    align-self: flex-end;
+}
+
+.menu-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #555555;
+    background-color: #09090c;
+}
+/* İletişim İkonları Alanı */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.contact-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #16161a; /* Koyu Gri/Siyah Arka Plan */
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px solid #252530;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* İkonların üzerine gelindiğinde veya tıklandığında parlaması */
+.contact-icon-btn:hover, .contact-icon-btn:active {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Her butona özel dokunuş (İsteğe bağlı, üzerine basınca hafif renklenir) */
+.contact-icon-btn.phone:hover { background-color: #0288d1; border-color: #0288d1; }
+.contact-icon-btn.whatsapp:hover { background-color: #25D366; border-color: #25D366; }
+.contact-icon-btn.instagram:hover { background-color: #E1306C; border-color: #E1306C; }
+.contact-icon-btn.address:hover { background-color: #e63946; border-color: #e63946; } /* Alev Kırmızısı */
+/* --- İLETİŞİM İKONLARI ALANI --- */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #16161a; /* Koyu Gri/Siyah */
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px solid #252530;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+    /* Tıklama sorununu çözen kritik ayarlar */
+    position: relative;
+    z-index: 15;
+    pointer-events: auto; 
+    cursor: pointer;
+}
+
+/* Üzerine gelince veya tıklayınca hafif yukarı kayma efekti */
+.contact-icon-btn:hover, .contact-icon-btn:active {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Renk Geçişleri */
+.contact-icon-btn.phone:hover { background-color: #0288d1; border-color: #0288d1; }
+.contact-icon-btn.whatsapp:hover { background-color: #25D366; border-color: #25D366; }
+.contact-icon-btn.instagram:hover { background-color: #E1306C; border-color: #E1306C; }
+.contact-icon-btn.address:hover { background-color: #e63946; border-color: #e63946; } /* Alev Kırmızısı */

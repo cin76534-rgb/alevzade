@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alevzade Lezzet Dünyası</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- İkonlar için Font Awesome Kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="welcome-screen">
+        <div class="overlay"></div>
+        <div class="welcome-content" style="z-index: 20; position: relative;">
+            <div class="logo-container">
+                <!-- Klasöründeki logo.png -->
+                <img src="logo.png" alt="Alevzade Logo" class="restaurant-logo" onerror="this.src='https://via.placeholder.com/150/e63946/ffffff?text=ALEVZADE'">
+                <h1>ALEVZADE</h1>
+                <div class="divider"></div>
+                <p class="subtitle">Geleneksel Kebap & Çorba Lezzetleri</p>
+            </div>
+            
+            <!-- Menü Butonu -->
+            <div class="welcome-action" style="position: relative; z-index: 25;">
+                <a href="menü.html" class="btn-main" style="display: inline-block;">
+                    <i class="fas fa-utensils"></i> Menüyü Görüntüle
+                </a>
+            </div>
+
+            <!-- İletişim ve Sosyal Medya Alanı -->
+            <div class="contact-links" style="position: relative; z-index: 30; pointer-events: auto; margin-bottom: 30px;">
+                <!-- Telefon -->
+                <a href="tel:+905000000000" class="contact-icon-btn phone" title="Telefon Et">
+                    <i class="fas fa-phone"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/905000000000" target="_blank" class="contact-icon-btn whatsapp" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/alevzade" target="_blank" class="contact-icon-btn instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Adres / Harita Butonu (Alevzade Kebap Çorba Tam Konumu) -->
+                <a href="https://maps.google.com/?q=Alevzade+Kebap+Çorba+Avsallar" target="_blank" class="contact-icon-btn address" title="Adres / Yol Tarifi" style="display: flex !important;">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+
+            <!-- Telif Hakkı Yazısı (Footer) -->
+            <footer class="welcome-footer" style="position: relative; z-index: 35; color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 20px;">
+                <p>&copy; 2026 Alevzade. Tüm Hakları Saklıdır.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
